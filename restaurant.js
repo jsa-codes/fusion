@@ -2,19 +2,13 @@ const { mongerInventory } = require('./fishMonger.js');
 
 const fishForRestaurant = mongerInventory();
 
-const fishForMenu = () => {
-  let menuItems = [];
-  for (const fish of fishForRestaurant) {
-    if (fish.price <= 5) {
-      menuItems.push(fish);
-    }
-  }
-  return menuItems;
-};
+const fishForMenu = () => {};
 
-const fishMenu = (menuItems) => {
+const fishMenu = () => {
+    // Create an empty string
   let menuHTML = '';
-  for (const item of menuItems) {
+//   Iterate fish for menu in order to build menu items
+  for (const  of ) {
     menuHTML += `<h1>Menu
     <article class="menu">
         <h2>${item}</h2>
@@ -27,4 +21,5 @@ const fishMenu = (menuItems) => {
   return menuHTML;
 };
 
+// Export fishMenu
 module.exports = { fishMenu };
