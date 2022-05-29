@@ -28,7 +28,7 @@ const mongerInventory = (budget) => {
   return fishForRestaurant;
 };
 
-// const fishFromMonger = mongerInventory();
-// console.log(fishFromMonger);
+const fishFromMonger = mongerInventory();
+console.log(fishFromMonger);
 
 module.exports = { mongerInventory };
