@@ -1,24 +1,23 @@
 const { mongerInventory } = require('./fishMonger.js');
 
-// Invoking and then storing the result of the mongerInventory function
-
+// Invoking and then storing the result of the mongerInventory function in fishForRestaurant
+// fishForMenu takes one parameter - chef's 'budget' = $5
 const fishForMenu = (budget) => {
   const fishForRestaurant = mongerInventory(budget);
+  //   Create empty array to store
   let fishItems = [];
-  //   for (const fish of fishForRestaurant) {
-  //     // console.log('Iterating Fish');
-  //     // console.log(fish.price, budget);
-  //     if (fish.price <= budget) {
-  //       //   console.log('Inside IF statement');
-  //       fishItems.push(fish);
-  //     }
-  //   }
+  for (const fish of fishForRestaurant) {
+    if (fish.price <= budget) {
+      fishItems.push(fish);
+    }
+  }
   return fishItems;
 };
 
 let fishMenuItems = fishForMenu(5);
-console.log(fishMenuItems);
+// console.log(fishMenuItems);
 
+// ➡️ This function creates the HTML for the Restaurant Menu
 // const fishMenu = () => {
 //     // Create an empty string
 //   let menuHTML = '';
@@ -36,5 +35,5 @@ console.log(fishMenuItems);
 //   return menuHTML;
 // };
 
-// Export fishMenu
-// module.exports = { fishMenu };
+// Exports fishMenu to main.js
+module.exports = { fishMenu };

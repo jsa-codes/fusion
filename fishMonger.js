@@ -4,8 +4,6 @@ const { boatInventory } = require('./fishingBoat.js');
 //      fishFromBoat contains the result of boatInventory
 const fishFromBoat = boatInventory();
 
-// mongerInventory takes in (1) argument : fish from the fishing boat
-// console.log('MONGER INVENTORY CALLED');
 const mongerInventory = (budget) => {
   // 2) Create an empty array to store selected fish from the fishing boat that meet the criteria below
   let fishForRestaurant = [];
@@ -17,22 +15,17 @@ const mongerInventory = (budget) => {
     //      DO NOT buy any fish that are priced higher than 7.50
     if (fish.amount >= 10 && fish.price <= 7.5) {
       fishForRestaurant.push(fish);
-      //   console.log('FISH', fish);
     }
 
     if (fish.price <= budget) {
-      //   console.log('Inside IF statement');
       fishForRestaurant.push(fish);
     }
   }
   return fishForRestaurant;
 };
 
-// let newMongerInventory = mongerInventory();
-// console.log(newMongerInventory);
-
-// const fishFromMonger = mongerInventory();
-// console.log(fishFromMonger);
+const fishFromMonger = mongerInventory();
+console.log(fishFromMonger);
 
 module.exports = { mongerInventory };
 /* 
