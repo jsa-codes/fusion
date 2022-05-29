@@ -18,22 +18,25 @@ let fishMenuItems = fishForMenu(5);
 // console.log(fishMenuItems);
 
 // ➡️ This function creates the HTML for the Restaurant Menu
-// const fishMenu = () => {
-//     // Create an empty string
-//   let menuHTML = '';
-// //   Iterate fish for menu in order to build menu items
-//   for (const  of ) {
-//     menuHTML += `<h1>Menu
-//     <article class="menu">
-//         <h2>${item}</h2>
-//         <section class="menu__item">${item} Soup</section>
-//         <section class="menu__item">${item} Sandwich</section>
-//         <section class="menu__item">Grilled ${item}</section>
-//     </article>
-//     `;
-//   }
-//   return menuHTML;
-// };
+const fishMenu = () => {
+  // Create an empty string
+  let menuHTML = '';
+  //   Iterate fish for menu in order to build menu items
+  for (const fish of fishMenuItems) {
+    menuHTML += `<h1>Menu</h1>
+    <article class="menu">
+    <h2>${fish.species}</h2>
+        <section class="menu__item">${fish.species} Soup</section>
+        <section class="menu__item">${fish.species} Sandwich</section>
+        <section class="menu__item">Grilled ${fish.species}</section>
+    </article>
+    `;
+  }
+  return menuHTML;
+};
+
+const fishOnMenu = fishMenu(fishMenuItems);
+console.log(fishOnMenu);
 
 // Exports fishMenu to main.js
 module.exports = { fishMenu };
