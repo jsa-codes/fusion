@@ -19,13 +19,15 @@ let fishMenuItems = fishForMenu(5);
 // ➡️ This function creates the HTML for the Restaurant Menu
 const fishMenu = () => {
   // Create an empty string
-  let menuHTML = '';
+  let menuHTML = `
+  <h1>Menu</h1>
+    <article class="menu">
+    `;
   //   Iterate fish for menu in order to build menu items
 
   for (const fish of fishMenuItems) {
     // ❓❓❓ Still don't know why I am getting duplicates. I think it's coming from the two IF statements pushing to the same array - fishForRestaurant in fishMonger.js❓❓❓
-    menuHTML += `<h1>Menu</h1>
-    <article class="menu">
+    menuHTML += `
     <h2>${fish.species}</h2>
         <section class="menu__item">${fish.species} Soup</section>
         <section class="menu__item">${fish.species} Sandwich</section>
@@ -36,7 +38,7 @@ const fishMenu = () => {
   return menuHTML;
 };
 
-const fishOnMenu = fishMenu(fishMenuItems);
+const fishOnMenu = fishMenu();
 console.log(fishOnMenu);
 
 // Exports fishMenu to main.js

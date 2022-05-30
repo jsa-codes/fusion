@@ -16,11 +16,14 @@ const mongerInventory = (budget) => {
     // 4) Check to see IF the number of fish on the fishing boat is greater than (10)
     //      If so then push fish to fishForRestaurant array AND
     //      DO NOT buy any fish that are priced higher than 7.50
-    if (fish.amount >= 10 && fish.price <= 7.5) {
-      fishForRestaurant.push(fish);
-    }
+
+    // ⚠️ THIS IF STATEMENT IS CAUSING DUPLICATES TO HAPPEN IN THE HTML STRING. (I just don't know why.)
+    // if (fish.amount >= 10 && fish.price <= 7.5) {
+    //   fishForRestaurant.push(fish);
+    // }
 
     // 5) A chef can tell the Monger that she can only spend 5.00.
+    // ❗️❗️❗️ This needs to be inside its own function!!!
     if (fish.price <= budget) {
       fishForRestaurant.push(fish);
     }
