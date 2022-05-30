@@ -32,9 +32,11 @@ const fishMenu = () => {
         <section class="menu__item">${fish.species} Soup</section>
         <section class="menu__item">${fish.species} Sandwich</section>
         <section class="menu__item">Grilled ${fish.species}</section>
+        `;
+  }
+  menuHTML += `
     </article>
     `;
-  }
   return menuHTML;
 };
 
