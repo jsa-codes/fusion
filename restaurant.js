@@ -5,8 +5,7 @@ const availableFishWithinBudget = mongerInventory(5);
 // The chef only buys 50% of the Monger Inventory that meets the chef's budget
 let purchasedFish = [];
 for (const fish of availableFishWithinBudget) {
-  fish.amount = fish.amount / 2;
-  //   fish.amount = 5;
+  fish.amount = 5;
   purchasedFish.push(fish);
 }
 
