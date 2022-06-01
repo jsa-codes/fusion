@@ -17,7 +17,4 @@ const boatInventory = () => {
   return freshFish;
 };
 
-const fishFromBoat = boatInventory();
-console.log(fishFromBoat);
-
 module.exports = { boatInventory };
