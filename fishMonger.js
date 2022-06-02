@@ -8,8 +8,10 @@ const fishFromBoat = boatInventory();
 // chefsBudget is the 'Placeholder' for the Chef's current budget of $5
 // This function is invoked in the restaurant.js module
 
+// STEP 1: The mongerInventory Function takes one parameter - chefsBudget
 const mongerInventory = (chefsBudget) => {
-  // STEP 1 and 2: The fishmonger buys fish that match the criteria and we save that to fishForRestaurants
+  // STEP 2: Create new empty array
+  //    This allows us to store the results of checking the conditions of amount and price on the fish from the boat
   let fishForRestaurants = [];
 
   // Iterate the boatInventory aka - "fishFromBoat"
